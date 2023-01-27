@@ -14,10 +14,10 @@ app.use(express.json());
 app.use(cors());
 
 mongoose
-    .connect("mongodb+srv://admin:admin@cluster023.8tolnol.mongodb.net/?retryWrites=true&w=majority",) {
+    .connect("mongodb+srv://admin:admin@cluster023.8tolnol.mongodb.net/?retryWrites=true&w=majority", {
         useNewUrlParser: true,
         useUnifiedTopology: true
-    }
+    })
     .then(() => console.log("MongoDb ulandi"))
     .catch((err) => console.error(err));
 
